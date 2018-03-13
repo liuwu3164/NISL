@@ -22,10 +22,10 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('InForSec', 'https://inforsec.org'),
-         ('CTF blue-lotus', 'http://www.blue-lotus.net/'),
-         ('Tsinghua Unvi.', 'http://www.tsinghua.edu.cn/'),
-        )
+#LINKS = (('InForSec', 'https://inforsec.org'),
+#         ('CTF blue-lotus', 'http://www.blue-lotus.net/'),
+#         ('Tsinghua Unvi.', 'http://www.tsinghua.edu.cn/'),
+#        )
 
 # Social widget
 #SOCIAL = (('You can add links in your config file', '#'),
@@ -34,7 +34,7 @@ LINKS = (('InForSec', 'https://inforsec.org'),
 DEFAULT_PAGINATION = 10
 
 #PLUGIN_PATHS = ['/home/yzm/pelican-plugins', ]
-PLUGINS = ['i18n_subsites', ]
+PLUGINS = ['i18n_subsites', 'pelican-toc' ]
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
 # Uncomment following line if you want document-relative URLs when developing

@@ -1,6 +1,8 @@
 Title: Haixin Duan
 Status: hidden
-Slug: ~duanhx
+Url: ~duanhx
+Save_as: ~duanhx\index.html
+
 
 Haixin Duan
 Professor in Tsinghua University,
