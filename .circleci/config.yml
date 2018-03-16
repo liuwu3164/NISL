@@ -40,8 +40,6 @@ jobs:
             . venv/bin/activate
             make html
 
-      - publish_ghp:
+      - run:
           command: |
-            cp .circleci/deploy_key ~/.ssh/id_rsa
-            chmod 600 ~/.ssh/id_rsa
-            ghp-import -r git@github.com:yuzeming/nisl-website.git -p output 
+            ghp-import -p output 
