@@ -90,15 +90,16 @@ class HtmlTreeNode(object):
                     self.id, self.header)
 
         if self.children:
-            ret += "<ul>{}</ul>".format('{}'*len(self.children)).format(
+            ret += "<ul class=\"list-group\" id=\"poc\">{}</ul>".format('{}'*len(self.children)).format(
                     *self.children)
 
         # each list
         if self.parent or self.include_title:
-            ret = "<li>{}</li>".format(ret)
+            ret = "<li class=\"list-group-item\">{}</li>".format(ret)
 
         # end wrapper
         if not self.parent:
+            return ret
             if self.include_title:
                 ret = "<div id='toc'><ul>{}</ul></div>".format(ret)
             else:

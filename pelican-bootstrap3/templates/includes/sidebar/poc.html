@@ -1,0 +1,23 @@
+{% if article and article.display_poc and article.toc %}
+  {% from 'includes/sidebar/macros.jinja' import title %}
+
+<!-- Sidebar/Poc -->
+<li class="list-group-item">
+  <h4>{{ title(_('Table of Contents'), DISABLE_SIDEBAR_TITLE_ICONS) }}</h4>
+	{{article.toc}}
+</li>
+<!-- End Sidebar/Series -->
+
+{% endif %}
+
+{% if page and page.display_poc and page.toc %}
+  {% from 'includes/sidebar/macros.jinja' import title %}
+
+<!-- Sidebar/Poc -->
+<li class="list-group-item">
+  <h4>{{ title(_('Table of Contents'), DISABLE_SIDEBAR_TITLE_ICONS) }}</h4>
+	{{page.toc}}
+</li>
+<!-- End Sidebar/Series -->
+
+{% endif %}
