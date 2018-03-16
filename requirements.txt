@@ -1,2 +1,4 @@
 pelican
 markdown
+bs4
+git+https://github.com/davisp/ghp-import.git
