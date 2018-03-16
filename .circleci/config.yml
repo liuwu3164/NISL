@@ -40,6 +40,11 @@ jobs:
             . venv/bin/activate
             make html
 
-      - run:
+      - deploy:
           command: |
+            cp .circleci/deploy_key ~/.ssh/id_rsa
+            chmod 600 ~/.ssh/id_rsa
+            git config user.email "yzmthu@163.com"
+            git config user.name "Deployment Bot"
+            git commit --allow-empty -m "Trigger deployment"
             ghp-import -p output 
