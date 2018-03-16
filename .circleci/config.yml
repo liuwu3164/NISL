@@ -50,5 +50,5 @@ jobs:
             cp .circleci/deploy_key ~/.ssh/id_rsa
             chmod 600 ~/.ssh/id_rsa
             ssh-add ~/.ssh/id_rsa
-            ghp-import -p  -m "Update documentation [ci skip]" -cname lab.yuzm.me output
+            ghp-import -p  -m "Update documentation [ci skip]" -c lab.yuzm.me output
             
