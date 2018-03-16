@@ -47,4 +47,4 @@ jobs:
             git config user.email "yzmthu@163.com"
             git config user.name "Deployment Bot"
             git commit --allow-empty -m "Trigger deployment"
-            ghp-import -p output 
+            python ghp-import-script.py -p output 
