@@ -30,7 +30,7 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r requirements.txt
+            pip3 install -r requirements.txt
 
       - save_cache:
           paths:
@@ -45,9 +45,13 @@ jobs:
 
       - deploy:
           command: |
+            . venv/bin/activate
+            ssh-add -D
             cp .circleci/deploy_key ~/.ssh/id_rsa
             chmod 600 ~/.ssh/id_rsa
+            ssh-add ~/.ssh/id_rsa
             git config user.email "yzmthu@163.com"
             git config user.name "Deployment Bot"
             git commit --allow-empty -m "Trigger deployment"
-            python ghp-import-script.py -p output 
+            ghp-import -p output 
+            
