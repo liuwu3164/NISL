@@ -1,4 +1,5 @@
 Title: Publication
+display_poc: True
 
 ###2010
 
